@@ -182,3 +182,12 @@ exercice 7
 
 SELECT CONCAT('Demain le minima observé en Belgique sera de ', bas, ' degrés.' ) 
 FROM météo ORDER BY bas asc limit 0,1
+
+
+Table météo déjà crée
+INSERT INTO Météo
+    (`ville`, `haut`, `bas`)
+VALUES
+    ('Bruxelles', 27, 13),
+
+;
