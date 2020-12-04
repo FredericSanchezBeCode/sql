@@ -1,0 +1,184 @@
+exercice 1
+
+select ville 
+from Météo
+
+exercice 2
+
+select ville, haut 
+from Météo
+
+exercice 3
+
+select ville, bas
+from Météo
+
+exercice 4
+
+select ville, haut
+from Météo
+where haut > 27
+
+exercice 5
+
+select ville, bas
+from Météo
+where bas <= 15
+
+exercice 6
+
+select ville, bas
+from Météo
+where bas = 15
+
+exercice 7
+
+select ville, bas
+from Météo
+where bas <> 15
+
+exercice 8
+
+select ville
+from Météo
+where ville like 'Br%'
+
+exercice 9
+
+select ville, haut
+from Météo
+where  haut between 26 and 28
+
+exercice 10
+
+select ville, bas
+from Météo
+where bas = 14 || bas = 16  ou = ||
+
+exercice 11
+
+select ville, bas, haut
+from Météo
+where  bas < 14 && haut >= 26 
+
+
+Drill 2
+
+exercice 1
+
+select *
+from octocats
+
+exercice 2
+
+select firstname 
+from octocats
+
+exercice 3
+
+select firstname, lastname, age
+from octocats
+
+exercice 4
+
+select firstname, lastname
+from octocats
+where promo = 'promo1central'
+
+exercice 5
+
+select firstname, lastname, birthdate
+from octocats
+where promo = 'promo1anderlecht' 
+
+
+
+Drill 3
+
+exercice 1
+
+select firstname
+from octocats ORDER BY firstname asc
+
+exercice 2
+
+select
+firstname, lastname
+from octocats ORDER BY lastname desc
+
+exercice 3
+
+select firstname, lastname, age
+from octocats ORDER BY age asc
+
+exercice 4
+
+select firstname, lastname, age
+from octocats
+where promo = 'promo1central' ORDER BY age asc
+
+exercice 5
+
+select firstname, lastname, age
+from octocats
+where promo = 'promo1central' && age between 23 and 28 ORDER BY age asc
+
+exercice 6
+
+select firstname, lastname, age, gender
+from octocats
+where promo = 'promo1central' && age between 25 and 35 ORDER BY age asc
+
+exercice 7
+
+select firstname, lastname, age, gender
+from octocats
+where promo = 'promo1central' && age between 25 and 35 && gender = 'M' ORDER BY age asc
+
+exercice 8
+
+select firstname, lastname, age, gender
+from octocats
+where promo = 'promo1central' ORDER BY age desc limit 0,1
+
+
+Drill 4
+
+exercice 1
+
+select COUNT(*)
+from octocats
+where gender = 'm'
+
+exercice 2
+
+select COUNT(*)
+from octocats
+where gender = 'f' && promo='promo1central'
+
+exercice 3
+
+select COUNT(*)
+from octocats
+where gender = 'm' && promo='promo1central'
+
+exercice 4
+
+select COUNT(*)
+from octocats
+where firstname = 'nadia'
+
+exercice 5
+
+select firstname, YEAR(birthdate)
+from octocats
+
+exercice 6
+
+SELECT  CONCAT('Demain le maxima observé en Belgique sera de ', haut, ' degrés.' ) 
+FROM  météo ORDER BY haut desc limit 0,1
+
+exercice 7
+
+SELECT CONCAT('Demain le minima observé en Belgique sera de ', bas, ' degrés.' ) 
+FROM météo ORDER BY bas asc limit 0,1
